@@ -20,3 +20,5 @@ Steps to run the web application
 8.Click on the address it will open the browser and search for any movie name which is available in the dataset(movies.csv)
 
 9.The recommendations will be displayed
+
+10.Download the data set from https://drive.google.com/drive/folders/10P7C-suaBAA5_ZAi4oEO_Pmsb7kG6JMZ?usp=drive_link
