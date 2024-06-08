@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Movie Recommendation</title>
+</head>
+<body>
+  <header>
+        <h1>Movie Recommendation System</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Top Rated</a>
+        <a href="#">Trending</a>
+        <a href="#">Genres</a>
+        <a href="#">About</a>
+    </nav>
+
+    <div class="container">
+        <div class="search-container">
+        <form action="{{ url_for('recommendation') }}" method="post">
+            <label for="movie"></label>
+            <input type="text" placeholder="Search for movies..." id="movie" name="movie" required>
+            <button type="submit">Recommend</button>
+        </form>
+            </div>
+        <div id="result">
+            <h3>Recommended Movies:</h3>
+        <ul>
+        {% for movie in recommendations %}
+            <li>{{ movie }}</li>
+        {% endfor %}
+        </ul>
+        </div>
+    </div>
+</body>
+</html>
